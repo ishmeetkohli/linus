@@ -1,47 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/adele.jpg" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/bg.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_backward.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_forward.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_next.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_pause.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_play.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_playlist.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_previous.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_repeat.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_repeat_focused.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_shuffle.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/btn_shuffle_focused.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/gradient_bg.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/gradient_bg_hover.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/ic_launcher.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_backward.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_backward_pressed.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_forward.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_forward_pressed.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_next.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_next_pressed.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_pause.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_pause_pressed.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_play.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_play_pressed.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_playlist.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_playlist_pressed.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_previous.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_previous_pressed.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_repeat.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_repeat_pressed.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_shuffle.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_btn_shuffle_pressed.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_seekbar_bg.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/img_seekbar_progress_blue.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/list_selector.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/seek_handler.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/seekbar_progress.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/seekbar_progress_bg.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/mobile/src/main/res/drawable/track_info_bg.png" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

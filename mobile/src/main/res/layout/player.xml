@@ -15,18 +15,8 @@
         android:paddingRight="5dp">
         
         <!-- Song Title -->
-        <TextView 
-            android:id="@+id/songTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="#04b3d2"
-            android:textSize="16dp"
-            android:paddingLeft="10dp"
-            android:textStyle="bold"
-            android:text="The Good, The Bad And The Ugly"
-            android:layout_marginTop="10dp"/>"
-        
+        "
+
         <!-- Playlist button -->
         <ImageButton 
             android:id="@+id/btnPlaylist"
@@ -44,10 +34,15 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:gravity="center"
-        android:layout_below="@id/player_header_bg">
-    	<ImageView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/adele"/>    
+        android:layout_below="@id/player_header_bg"
+        android:weightSum="1">
+    	<ImageView
+            android:id="@+id/albumArt"
+            android:layout_width="162dp"
+            android:scaleType="centerCrop"
+            android:layout_height="218dp"
+            android:src="@drawable/adele"
+            android:layout_weight="0.23" />
     </LinearLayout>
     
     <!-- Player Footer -->
@@ -68,17 +63,10 @@
             android:background="@layout/rounded_corner"
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
-            <!-- Previous Button -->
-            <ImageButton
-                android:id="@+id/btnPrevious" 
-                android:src="@drawable/btn_previous"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"/>
             <!-- Backward Button -->
             <ImageButton 
-                android:id="@+id/btnBackward"
-                android:src="@drawable/btn_backward"
+                android:id="@+id/btnDislike"
+                android:src="@drawable/btn_dislike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"/>
@@ -91,15 +79,8 @@
                 android:background="@null"/>
             <!-- Forward Button -->
             <ImageButton 
-                android:id="@+id/btnForward"
-                android:src="@drawable/btn_forward"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"/>
-            <!-- Next Button -->
-            <ImageButton 
-                android:id="@+id/btnNext"
-                android:src="@drawable/btn_next"
+                android:id="@+id/btnLike"
+                android:src="@drawable/btn_heart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"/>
@@ -148,29 +129,32 @@
             android:textColor="#04cbde"
             android:textStyle="bold"/>
     </LinearLayout>
-    
-    <!-- Repeat / Shuffle buttons -->
-    <LinearLayout 
-        android:layout_width="fill_parent"
+
+    <TextView
+        android:id="@+id/songTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/timerDisplay"
-        android:gravity="center">
-        <!-- Repeat Button -->
-        <ImageButton 
-            android:id="@+id/btnRepeat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/btn_repeat"
-            android:layout_marginRight="5dp"
-            android:background="@null"/>
-        
-        <!-- Shuffle Button -->        
-         <ImageButton 
-            android:id="@+id/btnShuffle" 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/btn_shuffle"
-            android:layout_marginLeft="5dp"
-            android:background="@null"/>
-    </LinearLayout>
+        android:layout_weight="1"
+        android:textColor="#04b3d2"
+        android:textSize="52dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:text=""
+        android:layout_below="@+id/songThumbnail"
+        android:layout_alignLeft="@+id/timerDisplay"
+        android:layout_alignStart="@+id/timerDisplay" />
+
+    <TextView
+        android:id="@+id/songArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="#04b3d2"
+        android:textSize="26dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:text=""
+        android:layout_below="@+id/songTitle"
+        android:layout_alignLeft="@+id/timerDisplay"
+        android:layout_alignStart="@+id/timerDisplay" />
 </RelativeLayout>

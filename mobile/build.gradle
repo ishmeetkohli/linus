@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "19.1.0"
+    buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.example.harmeet.linus"
@@ -41,12 +41,12 @@ dependencies {
     wearApp project(':wear')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.google.android.gms:play-services:8.4.0'
+//    compile 'com.google.android.gms:play-services:8.4.0'
     compile 'com.android.support:design:23.2.1'
-    compile 'com.github.kikoso:SwipeableCards:1.1-RELEASE@aar'
+//    compile 'com.github.kikoso:SwipeableCards:1.1-RELEASE@aar'
+    compile 'com.google.code.gson:gson:2.6.2'
     // This library handles authentication and authorization
     compile 'com.spotify.sdk:spotify-auth:1.0.0-beta12@aar'
-
     // This library handles music playback
     compile 'com.spotify.sdk:spotify-player:1.0.0-beta12@aar'
 }

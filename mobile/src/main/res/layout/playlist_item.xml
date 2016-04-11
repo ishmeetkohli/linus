@@ -10,7 +10,14 @@
         android:id="@+id/songTitle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:padding="16dp"
+        android:color="#f3f3f3"/>
+    <TextView
+        android:id="@+id/songArtist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:textSize="16dp"
-        android:padding="10dp"
+        android:padding="16dp"
         android:color="#f3f3f3"/>
 </LinearLayout>
