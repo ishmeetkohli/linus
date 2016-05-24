@@ -4,16 +4,26 @@ package com.example.harmeet.linus.beans;
  * Created by Ishmeet on 10/04/16.
  */
 public class Song {
+    String echonestId;
     String uri;
     String name;
     String thumbnail;
     String artist;
 
-    public Song(String uri, String thumbnail, String name, String artist) {
+    public Song(String echonestId, String uri, String name, String thumbnail, String artist) {
+        this.echonestId = echonestId;
         this.uri = uri;
         this.name = name;
         this.thumbnail = thumbnail;
         this.artist = artist;
+    }
+
+    public String getEchonestId() {
+        return echonestId;
+    }
+
+    public void setEchonestId(String echonestId) {
+        this.echonestId = echonestId;
     }
 
     public String getUri() {

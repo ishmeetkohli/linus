@@ -6,34 +6,46 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
 
+import com.example.harmeet.linus.beans.Song;
+import com.example.harmeet.linus.logic.SongsManager;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by Ishmeet on 10/04/16.
  */
-public class GetRecommendationTask extends AsyncTask<String, Void, Bitmap> {
-    ImageView bmImage;
-    int width;
+public class GetRecommendationTask extends AsyncTask<String, Void, String> {
 
-    public GetRecommendationTask(ImageView bmImage) {
-        this.bmImage = bmImage;
+    SongsManager songsManager;
+    RestClient restClient;
+
+    public GetRecommendationTask(SongsManager songsManager) {
+        this.songsManager = songsManager;
+        this.restClient = new RestClient();
     }
 
-    protected Bitmap doInBackground(String... urls) {
+    protected String doInBackground(String... urls) {
         String urldisplay = urls[0];
-        Bitmap mIcon11 = null;
-
+        String result = null;
         try {
-            InputStream in = new java.net.URL(urldisplay).openStream();
-            mIcon11 = BitmapFactory.decodeStream(in);
+            result = restClient.requestContent(urldisplay);
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
             e.printStackTrace();
         }
-        return mIcon11;
+        return result;
     }
 
-    protected void onPostExecute(Bitmap result) {
-        bmImage.setImageBitmap(result);
+    protected void onPostExecute(String result) {
+        ArrayList<Song> songList = new Gson().fromJson(result, new TypeToken<ArrayList<Song>>(){}.getType());
+        ArrayList<HashMap<String,String>> songMapList = new Gson().fromJson(result, new TypeToken<ArrayList<HashMap<String,String>>>(){}.getType());
+        if(songList != null) {
+            songsManager.appendSongList(songList);
+            songsManager.appendSongMapList(songMapList);
+        }
     }
 }

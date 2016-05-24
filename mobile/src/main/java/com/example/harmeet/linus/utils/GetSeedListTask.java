@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.example.harmeet.linus.beans.Song;
+import com.example.harmeet.linus.logic.ActionHandler;
 import com.example.harmeet.linus.logic.SongsManager;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -17,9 +18,11 @@ import java.util.HashMap;
 public class GetSeedListTask extends AsyncTask<String, Void, String> {
 
     SongsManager songsManager;
+    ActionHandler actionHandler;
     RestClient restClient;
 
-    public GetSeedListTask(SongsManager songsManager) {
+    public GetSeedListTask(SongsManager songsManager, ActionHandler actionHandler) {
+        this.actionHandler = actionHandler;
         this.songsManager = songsManager;
         this.restClient = new RestClient();
     }
@@ -41,5 +44,8 @@ public class GetSeedListTask extends AsyncTask<String, Void, String> {
         ArrayList<HashMap<String,String>> songMapList = new Gson().fromJson(result, new TypeToken<ArrayList<HashMap<String,String>>>(){}.getType());
         songsManager.setSongList(songList);
         songsManager.setSongMapList(songMapList);
+        if (actionHandler.getActivity().getmPlayer() != null) {
+            actionHandler.playFirst();
+        }
     }
 }

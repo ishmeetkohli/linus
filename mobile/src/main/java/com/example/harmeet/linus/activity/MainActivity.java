@@ -10,7 +10,8 @@ import android.view.MenuItem;
 import com.example.harmeet.linus.R;
 import com.example.harmeet.linus.logic.ActionHandler;
 import com.example.harmeet.linus.logic.SongsManager;
-import com.example.harmeet.linus.utils.Utilities;
+import com.example.harmeet.linus.utils.GetSeedListTask;
+import com.example.harmeet.linus.utils.ResetTask;
 import com.spotify.sdk.android.authentication.AuthenticationClient;
 import com.spotify.sdk.android.authentication.AuthenticationRequest;
 import com.spotify.sdk.android.authentication.AuthenticationResponse;
@@ -30,8 +31,12 @@ public class MainActivity extends Activity implements PlayerNotificationCallback
     private static final String REDIRECT_URI = "http://linus.com/callback/";
 
     private static final int REQUEST_CODE = 1337;
+    public static final String SONG_ID = "songId";
+    public static final String HOST_URL = "http://test-services.herokuapp.com/";
+
 
     Player mPlayer;
+    String seedSongId;
 
     private ActionHandler actionHandler;
     private SongsManager songsManager;
@@ -41,17 +46,20 @@ public class MainActivity extends Activity implements PlayerNotificationCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player);
 
+        Intent intent = getIntent();
+        seedSongId = (String) intent.getSerializableExtra("seedSongId");
+
+        songsManager = new SongsManager();
+        actionHandler = new ActionHandler(this, songsManager);
+
+        new ResetTask().execute(HOST_URL + "reset");
+        new GetSeedListTask(songsManager, actionHandler).execute(HOST_URL + "first?" + SONG_ID + "=" + seedSongId + "&remark=liked");
+
         //Authentication
         AuthenticationRequest.Builder builder = new AuthenticationRequest.Builder(CLIENT_ID, AuthenticationResponse.Type.TOKEN, REDIRECT_URI);
         builder.setScopes(new String[]{"user-read-private", "streaming"});
         AuthenticationRequest request = builder.build();
         AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
-
-        songsManager = new SongsManager();
-        actionHandler = new ActionHandler(this, songsManager);
-
-//        utils = new Utilities();
-//        songProgressBar.setOnSeekBarChangeListener(this); // Important
     }
 
     public Player getmPlayer() {
@@ -72,6 +80,10 @@ public class MainActivity extends Activity implements PlayerNotificationCallback
                     public void onInitialized(Player player) {
                         mPlayer.addConnectionStateCallback(MainActivity.this);
                         mPlayer.addPlayerNotificationCallback(MainActivity.this);
+
+                        if(songsManager.getSongMapList() != null){
+                            actionHandler.playFirst();
+                        }
                     }
 
                     @Override
@@ -116,7 +128,7 @@ public class MainActivity extends Activity implements PlayerNotificationCallback
         Log.d("MainActivity", "Playback event received: " + eventType.name());
 
         switch (eventType) {
-            case TRACK_END:
+            case END_OF_CONTEXT:
                 actionHandler.playSong(songsManager.getNextSong());
                 break;
             default:

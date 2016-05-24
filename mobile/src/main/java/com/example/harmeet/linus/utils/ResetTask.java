@@ -16,30 +16,24 @@ import java.util.HashMap;
  */
 public class ResetTask extends AsyncTask<String, Void, String> {
 
-    SongsManager songsManager;
     RestClient restClient;
 
-    public ResetTask(SongsManager songsManager) {
-        this.songsManager = songsManager;
+    public ResetTask() {
         this.restClient = new RestClient();
     }
 
     protected String doInBackground(String... urls) {
         String urldisplay = urls[0];
-        String result = null;
         try {
-            result = restClient.requestContent(urldisplay);
+            restClient.requestContent(urldisplay);
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
             e.printStackTrace();
         }
-        return result;
+        return null;
     }
 
     protected void onPostExecute(String result) {
-        ArrayList<Song> songList = new Gson().fromJson(result, new TypeToken<ArrayList<Song>>(){}.getType());
-        ArrayList<HashMap<String,String>> songMapList = new Gson().fromJson(result, new TypeToken<ArrayList<HashMap<String,String>>>(){}.getType());
-        songsManager.setSongList(songList);
-        songsManager.setSongMapList(songMapList);
+
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
@@ -14,6 +15,7 @@ import com.example.harmeet.linus.activity.MainActivity;
 import com.example.harmeet.linus.activity.PlayListActivity;
 import com.example.harmeet.linus.beans.Song;
 import com.example.harmeet.linus.utils.DownloadImageTask;
+import com.example.harmeet.linus.utils.GetRecommendationTask;
 import com.example.harmeet.linus.utils.Utilities;
 import com.spotify.sdk.android.player.PlayerState;
 import com.spotify.sdk.android.player.PlayerStateCallback;
@@ -104,6 +106,8 @@ public class ActionHandler implements SeekBar.OnSeekBarChangeListener {
             @Override
             public void onClick(View arg0) {
                 btnLike.setImageResource(R.drawable.img_btn_heart_pressed);
+                String newUrl = activity.HOST_URL + "later?songId=" + songsManager.getCurrentSong().getEchonestId()+"&remark=liked";
+                new GetRecommendationTask(songsManager).execute(newUrl);
             }
         });
 
@@ -114,6 +118,8 @@ public class ActionHandler implements SeekBar.OnSeekBarChangeListener {
                 playSong(songsManager.getNextSong());
                 state = STATE_PLAYING;
                 btnPlay.setImageResource(R.drawable.btn_pause);
+                String newUrl = activity.HOST_URL + "later?songId=" + songsManager.getCurrentSong().getEchonestId()+"&remark=disliked";
+                new GetRecommendationTask(songsManager).execute(newUrl);
             }
         });
 
@@ -129,11 +135,25 @@ public class ActionHandler implements SeekBar.OnSeekBarChangeListener {
         });
     }
 
+    public void playFirst() {
+        if(state == STATE_STOPPED) {
+            playSong(songsManager.getCurrentSong());
+            btnPlay.setImageResource(R.drawable.btn_pause);
+            state = STATE_PLAYING;
+        }
+    }
+
     public void playSong(Song song) {
         activity.getmPlayer().play(song.getUri());
         songTitleLabel.setText(song.getName());
         songArtistLabel.setText(song.getArtist());
-        new DownloadImageTask(albumArt).execute(song.getThumbnail());
+        btnLike.setImageResource(R.drawable.img_btn_heart);
+        if(song.getThumbnail() != null) {
+            new DownloadImageTask(albumArt).execute(song.getThumbnail());
+        } else {
+            albumArt.setImageResource(R.drawable.adele);
+        }
+
         updateProgressBar();
     }
 
@@ -186,5 +206,9 @@ public class ActionHandler implements SeekBar.OnSeekBarChangeListener {
             }
         });
         updateProgressBar();
+    }
+
+    public MainActivity getActivity() {
+        return activity;
     }
 }
