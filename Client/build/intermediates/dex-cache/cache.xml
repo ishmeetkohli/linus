@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.spotify.sdk/spotify-player/1.0.0-beta12/jars/libs/jnihelpers-1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="95f89497f7e22c5b8d130ffab782bc35013180ee">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/jnihelpers-1.0_11534a1ac86799be0b7647a0fc1c358c698a8860.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.1_1d8fcdd5c723f7b723d4c7a2c5ad94d13cdb8e63.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.spotify.sdk/spotify-player/1.0.0-beta12/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2166a6c09b3467f01793b27728fa2f5bdb0e2981">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/com.spotify.sdk-spotify-player-1.0.0-beta12_aa291cacb9dbc9cde4d6f3c4ab0099d172b2a183.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/tools/AndroidSDK/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_3c0107ffbe75be2b243538fdddf37e65059d5b9f.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.1_1ae26c84fb5deb3174e286e9dbc94b697d46886f.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.1_fb25a1432bfc3a00c4a2baa5684a1340c7e97717.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.2/f1bc476cc167b18e66c297df599b2377131a8947/gson-2.6.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f1bc476cc167b18e66c297df599b2377131a8947">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/gson-2.6.2_9d8fdbd3d9ef5104fa5c3e8e643023bb667930c3.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.spotify.sdk/spotify-auth/1.0.0-beta12/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5ae103bc312bb16fa0e04b4b50af27c0ad7eb987">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/com.spotify.sdk-spotify-auth-1.0.0-beta12_05deaa1812f213a87162eb92d8e8dccc71fbcf05.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_1d296f3aa3467d8f8255dcf43619740042f564e4.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.1_ea4fa97057b58a07618da2d0c5e4b5d018c67b4b.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.1_67a54fbc4a448f065ccf3bb30e2b64beb727f1f5.jar" />
+    </item>
+    <item
+        jar="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/Ishmeet/workspace/code/linus/mobile/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_f78dd54e15fbc34463fec6dae6ff4323eef31550.jar" />
+    </item>
+
+</items>
