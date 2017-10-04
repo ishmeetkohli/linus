@@ -1,4 +1,3 @@
-# Linus
 # Linus Music Recommendation System
 
 ### Process:
@@ -24,8 +23,8 @@
 * The algorithm is imported and run as a Flask server which interacts with the mobile app through http services. Flask server takes in parameters from app and returns a json file containing information about the next song to be played.
 
 ### Client Details:
-*Built on Android SDK version 23
-*Uses Spotify player Api beta 1.0.0
+* Built on Android SDK version 23.
+* Uses Spotify player Api beta 1.0.0.
 
 ### Server Details:
 * Built on python using flask server
