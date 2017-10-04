@@ -1,26 +1,7 @@
 # Linus
-#Linus Music Recommendation System
+# Linus Music Recommendation System
 
-###Just a short summary of the application. I will add a more detailed description of the application later
-
-* networkAlgorithm.py contains the main algorithm
-
-* linusServer.py contains the server implementation
-
-* utilities.py contains functions that will be used often
-
-* Android app folder contains the mobile app for this application. Credits to IshmeetKohli and HarmeetSaimbhi for contributing to the app.
-
-Most of the other .py files are run once to get features/info from songs database. This data is stored in files and is read from there.
-
-**TODO:**
-
-Provide more explanation for the server and app communication process.
-
-In short, app calls "first" function when it is run for the first time. For every call after the first one,
-"later" function is called. (TODO part: simplify this)
-
-###Process:
+### Process:
 
 * Million song dataset was used for getting audio features.
 
@@ -42,13 +23,12 @@ In short, app calls "first" function when it is run for the first time. For ever
 
 * The algorithm is imported and run as a Flask server which interacts with the mobile app through http services. Flask server takes in parameters from app and returns a json file containing information about the next song to be played.
 
-#### Future scope:
+### Client Details:
+*Built on Android SDK version 23
+*Uses Spotify player Api beta 1.0.0
 
-1. Since this is a basic working prototype, the foremost thing to do is provide performance improvements so that
-   the application can be scaled.
-
-2. Better way to represent song vectors. Instead of just binary vectors, use a range of values.
-
-3. Introduce Genre feature and a test a better algorithm to calculate distances.
-
-4. Provide a more detailed documentation.
+### Server Details:
+* Built on python using flask server
+* networkAlgorithm.py contains the main algorithm
+* linusServer.py contains the server implementation
+* utilities.py contains functions that will be used often
